@@ -1,0 +1,60 @@
+Para fazer push do seu projeto para um repositório do GitHub via terminal do Windows, siga os passos abaixo:
+
+1. Instale o Git: Se ainda não tiver o Git instalado no seu sistema, você precisará baixá-lo e instalá-lo. Você pode fazer o download da versão para Windows em: https://git-scm.com/download/win. Siga as instruções de instalação padrão.
+
+2. Crie um repositório no GitHub: Acesse o GitHub (https://github.com/) e crie um novo repositório vazio. Anote a URL do repositório que será usada no próximo passo.
+
+3. Abra o terminal do Windows: Pressione a tecla Windows + R, digite "cmd" (sem aspas) e pressione Enter. Isso abrirá a janela do prompt de comando do Windows.
+
+4. Navegue até o diretório do seu projeto: Use o comando "cd" para navegar até o diretório onde o seu projeto está localizado. Por exemplo:
+
+```bash
+cd caminho/para/o/diretorio/do/seu/projeto
+```
+
+5. Configure o Git: Configure o Git com o seu nome de usuário e e-mail, que serão usados nos commits. Substitua "seu_nome_de_usuario" e "seu_email@example.com" pelos seus dados:
+
+```bash
+git config --global user.name "seu_nome_de_usuario"
+git config --global user.email "seu_email@example.com"
+```
+
+6. Inicialize o repositório Git localmente: Se o seu projeto ainda não é um repositório Git, inicie-o executando o seguinte comando:
+
+```bash
+git init
+```
+
+7. Adicione os arquivos ao commit: Use o comando "git add" para adicionar os arquivos ao commit. Por exemplo, para adicionar todos os arquivos no diretório, você pode usar:
+
+```bash
+git add .
+```
+
+8. Realize o commit: Agora, faça o commit dos arquivos adicionados. Substitua "mensagem_do_commit" pela mensagem que descreve as alterações que você está enviando para o repositório:
+
+```bash
+git commit -m "mensagem_do_commit"
+```
+
+9. Conecte o repositório remoto do GitHub: Use o comando "git remote add" para conectar o seu repositório local ao repositório remoto no GitHub. Substitua "url_do_repositorio" pela URL do repositório do GitHub que você criou no passo 2:
+
+```bash
+git remote add origin url_do_repositorio
+```
+
+10. Faça o push do seu projeto para o GitHub: Agora você está pronto para enviar o seu projeto para o repositório remoto no GitHub. Use o comando "git push" para fazer o push dos seus commits:
+
+```bash
+git push -u origin master
+```
+
+Ou, caso você esteja trabalhando em um branch diferente do master (por exemplo, em um branch chamado "main"):
+
+```bash
+git push -u origin main
+```
+
+Após inserir suas credenciais do GitHub (usuário e senha ou token de acesso pessoal), os arquivos serão enviados para o repositório remoto no GitHub.
+
+A partir deste ponto, você pode usar os comandos "git add", "git commit" e "git push" sempre que quiser enviar alterações para o repositório remoto no GitHub.
