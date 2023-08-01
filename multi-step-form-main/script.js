@@ -12,28 +12,21 @@ function showTab(n){
 
     if(n === 0){
         document.getElementById("prev").style.display = "none";
-        document.getElementById("prev-mob").style.display = "none";
-
     } else {
         document.getElementById("prev").style.display = "inline";
-        document.getElementById("prev-mob").style.display = "inline";
     }
 
     if(n === (x.length - 2))
     {
         document.getElementById("next").innerHTML = "Confirm";
-        document.getElementById("next-mob").innerHTML = "Confirm";
     }else{
         document.getElementById("next").innerHTML = "Next Step";
-        document.getElementById("next-mob").innerHTML = "Next Step";
     }
 
     if (n === (x.length - 1))
     {
         document.getElementById("next").style.display = "none";
         document.getElementById("prev").style.display = "none";
-        document.getElementById("next-mob").style.display = "none";
-        document.getElementById("prev-mob").style.display = "none";
     }
 }
 
@@ -91,7 +84,7 @@ function nextPrev(n){
 function seeProgress(n){
     let prg = document.getElementsByClassName("progress");
     for(i=0; i<prg.length; i++){
-        if (i == n || i == (n+4)){
+        if (i == n){
             prg[i].style.backgroundColor = "hsl(229, 24%, 87%)";
             prg[i].style.color = "black";
         } else{
@@ -100,14 +93,9 @@ function seeProgress(n){
         }
     }
 
-    if(n == (prg.length-4)){
-        cont = prg.length - 4;
-        prg[cont-1].style.backgroundColor = "hsl(229, 24%, 87%)";
-        prg[cont-1].style.color = "black";
-        prg[cont+3].style.backgroundColor = "hsl(229, 24%, 87%)";
-        prg[cont+3].style.color = "black";
-        prg[4].style.color = "white";
-        prg[4].style.backgroundColor = "transparent";
+    if(n == prg.length){
+        prg[n-1].style.backgroundColor = "hsl(229, 24%, 87%)";
+        prg[n-1].style.color = "black";
     }
 }
 
@@ -448,13 +436,13 @@ function changePlanSubscription(){
         }
     }
 
-    // function changeDiv(){
-    //     let body = document.getElementsByName("body");
-    //     if (body.style.width == 500){
-    //         body.style.backgroundColor = 'red';
-    //     }
+    function changeDiv(){
+        let body = document.getElementsByName("body");
+        if (body.style.width == 500){
+            body.style.backgroundColor = 'red';
+        }
         
-    // }
+    }
     // function changeDiv02(){
 
     // }
